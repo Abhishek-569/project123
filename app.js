@@ -6,7 +6,8 @@ const tester = require("./models");
 const port = process.env.PORT
 const app = express();
 
-app.use(express.json());
+//app.use(express.json());
+app.use(express.static(path.join(__dirname, "client/build")))
 
 app.get("/" , (req , res)=>{
     res.status(200).send("hello Arun Patel!")
